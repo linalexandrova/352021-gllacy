@@ -312,10 +312,10 @@
 <footer class="main-footer">
     <div class="footer-social">
         <ul>
-            <li><a class="social-button twitter" href="#"><img src="img/twitter.svg" alt="twitter"></a></li>
-            <li><a class="social-button instagram" href="#"><img src="img/instagram.svg" alt="instagram"></a></li>
-            <li><a class="social-button facebook" href="#"><img src="img/fb.svg" alt="facebook"></a></li>
-            <li><a class="social-button vkontakte" href="#"><img src="img/vk.svg" alt="vkontakte"></a></li>
+            <li><a class="social-button twitter" href="#"><img src="img/twitter.svg" alt="twitter">Twitter</a></li>
+            <li><a class="social-button instagram" href="#"><img src="img/instagram.svg" alt="instagram">Instagram</a></li>
+            <li><a class="social-button facebook" href="#"><img src="img/fb.svg" alt="facebook">Facebook</a></li>
+            <li><a class="social-button vkontakte" href="#"><img src="img/vk.svg" alt="vkontakte">Vkontakte</a></li>
         </ul>
     </div>
     <nav class="footer-navigation" >
@@ -337,15 +337,18 @@
 <section class="search-form">
     <h2 class=visually-hidden>Поиск по сайту</h2>
     <form action="#" method="get">
-        <input type="search" name="search" placeholder="Что ищем?">
+        <lable for="search">Поиск</label>
+        <input type="search" name="search" placeholder="Что ищем?" id="search">
     </form>
 </section>
 <section class="login-form">
     <h2 class=visually-hidden>Войти в личный кабинет</h2>
     <form action="#" method="get">
-        <input type="email" placeholder="Электронная почта" name="email">
-        <input type="password" placeholder="Пароль" name="password">
-        <input type="submit" value="Отправить">
+        <label for="login-form-email">Электронная почта:</label>
+        <input type="email" placeholder="Электронная почта" name="email" id="login-form-email">
+        <label for="login-form-pass">Пароль:</label>
+        <input type="password" placeholder="Пароль" name="password" id="login-form-pass">
+        <button type="submit">Отправить</button>
         <a href="" class="forget-link">Забыли пароль?</a>
         <a href="" class="registration-link">Новая регистрация</a>
     </form>

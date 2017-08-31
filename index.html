@@ -162,8 +162,9 @@
 			<h2 class=visually-hidden>Подпишитесь на нас</h2>
 			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
 			<form action="#" method="get">
-				<input type="email" placeholder="Электронная почта">
-				<input type="submit" value="Отправить">
+				<label for="subscribe-email">Электронная почта:</label>
+				<input type="email" placeholder="Электронная почта" id="subscribe-email">
+				<button type="submit">Отправить</button>
 			</form>
 		</section>
 	</section>
@@ -217,15 +218,18 @@
 <section class="search-form">
 	<h2 class=visually-hidden>Поиск по сайту</h2>
 	<form action="#" method="get">
-		<input type="search" name="search" placeholder="Что ищем?">
+		<lable for="search">Поиск</label>
+		<input type="search" name="search" placeholder="Что ищем?" id="search">
 	</form>
 </section>
 <section class="login-form">
 	<h2 class=visually-hidden>Войти в личный кабинет</h2>
 	<form action="#" method="get">
-		<input type="email" placeholder="Электронная почта" name="email">
-		<input type="password" placeholder="Пароль" name="password">
-		<input type="submit" value="Отправить">
+		<label for="login-form-email">Электронная почта:</label>
+		<input type="email" placeholder="Электронная почта" name="email" id="login-form-email">
+		<label for="login-form-pass">Пароль:</label>
+		<input type="password" placeholder="Пароль" name="password" id="login-form-pass">
+		<button type="submit">Отправить</button>
 		<a href="" class="forget-link">Забыли пароль?</a>
 		<a href="" class="registration-link">Новая регистрация</a>
 	</form>
@@ -234,10 +238,13 @@
 	<h2 class=visually-hidden>Форма обратной связи</h2>
 	<p>Мы обязательно вам ответим!</p>
 	<form action="#" method="get">
-		<input type="text" placeholder="Как вас зовут?" name="name">
+		<label for="feedback-name">Имя:</label>
+		<input type="text" placeholder="Как вас зовут?" name="name" id="feedback-name">
+		<label for="feedback-email">Электронная почта:</label>
 		<input type="email" placeholder="Ваша почта для ответа?" name="email">
-		<textarea placeholder="Напишите что-нибудь..." name="comment"></textarea>
-		<input type="submit" value="Отправить">
+		<label for="comment">Ваш текст:</label>
+		<textarea placeholder="Напишите что-нибудь..." name="comment" id="comment"></textarea>
+		<button type="submit">Отправить</button>
 	</form>
 </section>
 
