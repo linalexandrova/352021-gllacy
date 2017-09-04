@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Каталог Gllacy</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 <header class="main-header">
@@ -12,14 +14,16 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy»">
         </a>
         <ul class="site-navigation">
-            <li><a href="catalog.html">Каталог</a></li>
+            <li class="catalog-active"><a href="catalog.html">Каталог</a></li>
             <li><a href="">Доставка и оплата</a></li>
             <li><a href="">О компании</a></li>
         </ul>
         <div class="user-navigation">
-            <button class="search">Поиск</button>
-            <button class="login-link">Вход</button>
-            <button class="cart cart-active">2 товара</button>
+          <button class="search"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path id="search" fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+          Поиск</button>
+          <button class="login-link"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path id="entrance" d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+          Вход</button>
+          <button class="cart"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#fff"><path id="basket" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>Пусто</button>
         </div>
         <div class="header-contacts">
             <p class="worktime">С 10 до 20, ежедневно</p>
@@ -337,7 +341,7 @@
 <section class="search-form">
     <h2 class=visually-hidden>Поиск по сайту</h2>
     <form action="#" method="get">
-        <lable for="search">Поиск</label>
+        <label for="search">Поиск</label>
         <input type="search" name="search" placeholder="Что ищем?" id="search">
     </form>
 </section>
