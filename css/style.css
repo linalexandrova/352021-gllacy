@@ -145,16 +145,16 @@ a {
   position: relative;
 }
 
-.catalog-menu:hover .dropdown {
-  display: block;
-}
-
 .dropdown {
   position: absolute;
   top: 39px;
   left: -5px;
   display: none;
-  z-index: 20;
+}
+
+.catalog-menu:hover .dropdown {
+  display: block;
+  position: absolute;
 }
 
 .dropdown-list {
@@ -169,7 +169,6 @@ a {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   margin: 0;
   padding: 0;
-  z-index: 20;
 }
 
 .dropdown-list::before {
@@ -1006,7 +1005,7 @@ input[type="radio"] {
   top: 98px;
   padding: 0;
   margin: 0 0 0 -1px;
-  z-index: 10;
+  z-index: 2;
 }
 
 .breadcrumbs a {
@@ -1214,10 +1213,7 @@ input[type="radio"] {
   opacity: 0.4;
 }
 
-#zero-fat:checked + label[for="zero-fat"]::before,
-#to-ten-fat:checked + label[for="to-ten-fat"]::before,
-#to-thirty-fat:checked + label[for="to-thirty-fat"]::before,
-#over-thirty-fat:checked + label[for="over-thirty-fat"]::before {
+.fat-filter-input:checked + label::before{
   background: url("../img/radio-on-22.svg") 0 0 no-repeat;
 }
 
@@ -1269,11 +1265,7 @@ input[type="radio"] {
   top: 5px;
 }
 
-#chocolate:checked + label[for="chocolate"]::before,
-#sugar:checked + label[for="sugar"]::before,
-#fruits:checked + label[for="fruits"]::before,
-#syrups:checked + label[for="syrups"]::before,
-#jams:checked + label[for="jams"]::before {
+.adds-filter-input:checked + label::before {
   background: url("../img/checkbox-on-20.svg") 0 0 no-repeat;
 }
 
