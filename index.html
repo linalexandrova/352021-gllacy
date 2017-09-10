@@ -250,13 +250,15 @@
 	<h2 class=visually-hidden>Форма обратной связи</h2>
 	<p>Мы обязательно вам ответим!</p>
 	<form action="#" method="get">
-		<label for="feedback-name">Имя:</label>
-		<input type="text" placeholder="Как вас зовут?" name="name" id="feedback-name">
-		<label for="feedback-email">Электронная почта:</label>
-		<input type="email" placeholder="Ваша почта для ответа?" name="email" id="feedback-email">
-		<label for="comment">Ваш текст:</label>
-		<textarea placeholder="Напишите что-нибудь..." name="comment" id="comment"></textarea>
-		<button type="submit">Отправить</button>
+		<input type="text" placeholder="Как вас зовут?" name="name" id="feedback-name" required>
+    <label for="feedback-name">Имя:</label>
+
+		<input type="email" placeholder="Ваша почта для ответа?" name="email" id="feedback-email" required>
+    <label for="feedback-email">Электронная почта:</label>
+
+		<textarea placeholder="Напишите что-нибудь..." name="comment" id="comment" required></textarea>
+    <label for="comment">Ваш текст:</label>
+		<button class="feedback-btn btn" type="submit">Отправить</button>
 	</form>
 </section>
 </div>
