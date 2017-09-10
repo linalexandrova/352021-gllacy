@@ -42,7 +42,7 @@ a {
   line-height: 44px;
   font-weight: bold;
   background-image: linear-gradient( to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.004);
+  box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.4);
   border-radius: 22px;
   border: none;
   color: #fefefe;
@@ -53,7 +53,7 @@ a {
 .btn:hover {
   color: #fefefe;
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.4);
 }
 
 .btn:active {
@@ -167,6 +167,7 @@ a {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   margin: 0;
   padding: 0;
+  z-index: 5;
 }
 
 .dropdown-list::before {
@@ -306,9 +307,9 @@ a {
   content: "";
   display: block;
   width: 100%;
-  height: 10px;
+  height: 30px;
   position: absolute;
-  top: -8px;
+  top: -28px;
   left: 0;
 }
 
@@ -323,8 +324,20 @@ a {
 
 .search-form label {
   position: absolute;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+  color: #5b9ddf;
+  margin-bottom: 3px;
+  margin-left: 15px;
+  opacity: 0;
+  top: 5px;
+  left: 15px;
 }
 
+.search-form input:focus ~ label {
+  opacity: 1;
+}
 
 .login-form {
   display: none;
@@ -914,8 +927,9 @@ input[type="radio"] {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
-  text-decoration-color: #323232;
+  text-decoration: underline;
   margin-left: 19px;
+  margin-top: -12px;
 }
 
 .subscribe p {
@@ -935,40 +949,33 @@ input[type="radio"] {
 }
 
 .subscribe input {
-  width: 356px;
+  width: 350px;
   height: 40px;
-  font-weight: bold;
   border: 1px solid #b2b2b2;
   border-radius: 6px;
-  padding-left: 15px;
+  padding-left: 14px;
 }
 
 .subscribe label {
-  display: inline-block;
+  display: block;
   position: absolute;
-  width: 366px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
-  left: 15px;
-  top: 10px;
-}
-
-.subscribe input:focus ~ label {
-  display: inline-block;
-  position: relative;
-  width: 366px;
   font-size: 11px;
   line-height: 13px;
   color: #5b9ddf;
-  top: -65px;
-  left: 10px;
+  top: -15px;
+  left: 15px;
+  opacity: 0;
+}
+
+.subscribe input:focus ~ label {
+  opacity: 1;
 }
 
 .subscribe .btn {
   width: 128px;
   color: #fefefe;
   margin-left: 10px;
+  box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.4);
 }
 
 .container {
@@ -1179,6 +1186,11 @@ input[type="radio"] {
   background: url("../img/radio-on-22.svg") 50% 50%;
 }
 
+.fat label:hover {
+  opacity: 1;
+}
+
+
 .adds ul {
   display: flex;
   justify-content: space-between;
@@ -1229,6 +1241,9 @@ input[type="radio"] {
   background: url("../img/checkbox-on-20.svg") 0 0 no-repeat;
 }
 
+.adds label:hover {
+  opacity: 1;
+}
 
 .filter button {
   position: relative;
@@ -1378,17 +1393,22 @@ input[type="radio"] {
   color: white;
   margin-left: 25px;
   margin-top: 25px;
+  box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.4);
 }
 
 .feedback-form {
-  display: none;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
   width: 453px;
   height: 442px;
+  text-align: left;
   color: #323232;
   background: #F8F7F5;
   border-radius: 10px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   padding-left: 24px;
+  z-index: 10;
 }
 
 .feedback-form p {
@@ -1401,15 +1421,14 @@ input[type="radio"] {
   margin-bottom: 19px;
 }
 
-.feedback-form p::after  {
-  content: "";
-  display: block;
+.feedback-form .cross-form  {
   position: absolute;
   width: 18px;
   height: 17px;
   background: url("../img/cross-big.svg");
-  top: -1px;
+  top: 15px;
   right: 16px;
+  cursor: pointer;
 }
 
 .feedback-form form {
@@ -1435,10 +1454,6 @@ input[type="radio"] {
 .feedback-form label[for="comment"] {
   top: -170px;
 }
-
-/*.feedback-form input:focus ~ label {*/
-/*opacity: 1;*/
-/*}*/
 
 #feedback-name:focus ~ label[for="feedback-name"],
 #feedback-email:focus ~ label[for="feedback-email"],
@@ -1472,6 +1487,29 @@ input[type="radio"] {
   margin-left: auto;
   margin-top: 10px;
 }
+
+.hidden {
+  display: none;
+}
+
+.popup-centered-overlay {
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.popup-centered-overlay::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
 
 
 .main-footer {
