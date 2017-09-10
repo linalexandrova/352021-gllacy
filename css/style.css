@@ -154,6 +154,7 @@ a {
   top: 39px;
   left: -5px;
   display: none;
+  z-index: 20;
 }
 
 .dropdown-list {
@@ -1535,6 +1536,7 @@ input[type="radio"] {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
 }
 
 .popup-centered-overlay::before {
