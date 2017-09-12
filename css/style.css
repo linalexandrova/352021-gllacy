@@ -406,7 +406,6 @@ a {
   fill: #323232;;
 }
 
-
 .login-dropdown:focus-within .login-form {
   display: flex;
 }
@@ -1032,6 +1031,7 @@ input.slide-3:checked ~ .site-wrapper {
   color: #e84d37;
   text-decoration: underline;
 }
+
 .blog-news a:active {
   color: #e84d37;
   text-decoration: underline;
