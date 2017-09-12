@@ -8,20 +8,20 @@
   <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<input type="radio" name="point" id="slide1" checked>
-<input type="radio" name="point" id="slide2">
-<input type="radio" name="point" id="slide3">
+<input class="slide-1 hidden" type="radio" name="point" id="slide1" checked>
+<input class="slide-2 hidden" type="radio" name="point" id="slide2">
+<input class="slide-3 hidden" type="radio" name="point" id="slide3">
 <div class="site-wrapper">
   <div class="background-container">
     <header class="main-header">
       <nav class="main-navigation">
         <img class="main-header-logo-img" src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy»">
         <ul class="site-navigation">
-          <li class="catalog-menu" tabindex="2">
-            <a href="#" tabindex="0">Каталог</a>
+          <li class="catalog-menu">
+            <a class="open-catalog-menu-link" href="#">Каталог</a>
             <div class="dropdown">
               <ul class="dropdown-list">
-                <li><a class="catalog-menu-link" href="#">Новинки</a></li>
+                <li tabindex="2"><a class="catalog-menu-link" href="#">Новинки</a></li>
                 <li class=""><a class="catalog-menu-link" href="catalog.html">Сливочное</a></li>
                 <li><a class="catalog-menu-link" href="#">Щербеты</a></li>
                 <li><a class="catalog-menu-link" href="#">Фруктовый лед</a></li>
@@ -60,10 +60,10 @@
             </button>
             <h2 class=visually-hidden>Войти в личный кабинет</h2>
             <form class="login-form" action="#" method="get">
-              <input class="email" type="email" placeholder="Электронная почта" name="email" id="login-form-email">
-              <label for="login-form-email">Электронная почта</label>
-              <input class="password" type="password" placeholder="Пароль" name="password" id="login-form-pass">
-              <label for="login-form-pass">Пароль</label>
+              <input class="email" type="email" placeholder="Электронная почта" name="email" id="login-form-email" class="login-form-email-input">
+              <label class="login-form-email" for="login-form-email">Электронная почта</label>
+              <input class="password" type="password" placeholder="Пароль" name="password" id="login-form-pass" class="login-form-pass-input">
+              <label class="login-form-pass" for="login-form-pass">Пароль</label>
               <button class="btn" type="submit">Войти</button>
               <div class="login-help">
                 <a href="" class="forget-link">Забыли пароль?</a>
@@ -104,9 +104,9 @@
           <a class="slide-btn btn" href="#">Давайте оба!</a>
         </div>
         <div class="controls">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
+          <label class="slide-1" for="slide1"></label>
+          <label class="slide-2" for="slide2"></label>
+          <label class="slide-3" for="slide3"></label>
         </div>
       </div>
       <section class="promo-block">
@@ -241,9 +241,7 @@
         </section>
       </section>
       <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2826.4476307399514!2d30.32546741669823!3d59.93877456975922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1504685530916"
-          width="1200" height="428" style="border:0" allowfullscreen></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2f03e0e607770acfb46776f23d44c9c133e393c247d3afb7f1e1811f886027&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="1200" height="428"></iframe>
         <div class="map-contacts-information">
           <div class="map-contacts-information-container">
             <h2 class=visually-hidden>Наши контакты</h2>
@@ -264,7 +262,7 @@
             <path fill="#FFF"
                   d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/>
           </svg>
-        </a></li>
+        </a><p class="visually-hidden">Twitter</p></li>
         <li><a class="social-button instagram" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <g fill="#FFF">
@@ -276,13 +274,13 @@
                 d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/>
             </g>
           </svg>
-        </a></li>
+        </a><p class="visually-hidden">Instagram</p></li>
         <li><a class="social-button facebook" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="#FFF"
                   d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/>
           </svg>
-        </a></li>
+        </a><p class="visually-hidden">Facebook</p></li>
         <li><a class="social-button vkontakte" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <g fill="#FFF">
@@ -292,7 +290,7 @@
                 d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/>
             </g>
           </svg>
-        </a></li>
+        </a><p class="visually-hidden">Vkontakte</p></li>
       </ul>
       <nav class="footer-navigation">
         <ul class="links">
@@ -305,7 +303,7 @@
       <div class="copyright">
         <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg"
                                                                                          width="108" height="39"
-                                                                                         alt="Логотип HTML academy"></a>
+                                                                                         alt="Логотип HTML academy"><b class="visually-hidden">Логотип HTML academy</b></a>
         <p>Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
         </p>
       </div>
@@ -318,16 +316,16 @@
         <span id="crossForm" class="cross-form"></span>
         <form action="#" method="get">
           <input type="text" placeholder="Как вас зовут?" name="name" id="feedback-name" required>
-          <label for="feedback-name">Имя:</label>
+          <label class="feedback-name" for="feedback-name">Как вас зовут?</label>
           <input type="email" placeholder="Ваша почта для ответа?" name="email" id="feedback-email" required>
-          <label for="feedback-email">Электронная почта:</label>
+          <label class="feedback-email" for="feedback-email">Ваша почта для ответа?</label>
           <textarea placeholder="Напишите что-нибудь..." name="comment" id="comment" required></textarea>
-          <label for="comment">Ваш текст:</label>
+          <label class="comment" for="comment">Напишите что-нибудь...</label>
           <button class="feedback-btn btn" type="submit">Отправить</button>
         </form>
       </section>
     </div>
   </div>
 </div>
-<script src="js/script.js" type="text/javascript"></script>
+<script src="js/min.script.js" type="text/javascript"></script>
 </body>
