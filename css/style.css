@@ -69,7 +69,7 @@ a {
 }
 
 .main-header-logo-img {
-  margin-top: -2px;
+  margin-top: -4px;
 }
 
 .main-navigation {
@@ -486,6 +486,16 @@ a {
   padding: 0;
 }
 
+.login-help a:hover {
+  color: #e84d37;
+  text-decoration: underline;
+}
+
+.login-help a:active {
+  color: #e84d37;
+  text-decoration: underline;
+}
+
 .cart-list {
   display: none;
   flex-wrap: wrap;
@@ -889,6 +899,11 @@ input.slide-3:checked ~ .site-wrapper {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.catalog .catalog-item-title:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .catalog .catalog-btn {
   display: none;
 }
@@ -1113,6 +1128,11 @@ input.slide-3:checked ~ .site-wrapper {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.breadcrumbs a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .breadcrumbs li:not(.breadcrumbs-current)::after {
   content: "»";
   display: inline-block;
@@ -1295,7 +1315,7 @@ input.slide-3:checked ~ .site-wrapper {
   width: 27px;
   height: 22px;
   line-height: 22px;
-  vertical-align: middle;
+  vertical-align: baseline;
   border-radius: 50%;
   background: url("../img/radio-off-22.svg") 0 0 no-repeat;
   cursor: pointer;
@@ -1319,7 +1339,6 @@ input.slide-3:checked ~ .site-wrapper {
 .adds ul {
   display: flex;
   justify-content: space-between;
-  width: 667px;
   height: 36px;
   font-weight: 500;
   color: white;
@@ -1359,7 +1378,7 @@ input.slide-3:checked ~ .site-wrapper {
   width: 28px;
   height: 20px;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: baseline;
   background: url("../img/checkbox-off-20.svg") 0 0 no-repeat;
   cursor: pointer;
   opacity: 0.8;
@@ -1740,6 +1759,11 @@ input.slide-3:checked ~ .site-wrapper {
 }
 
 .links a:hover {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+.links a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
