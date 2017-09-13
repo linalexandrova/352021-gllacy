@@ -153,13 +153,8 @@ a {
   position: relative;
 }
 
-.catalog-menu:hover .dropdown {
-  display: block;
-  position: absolute;
-  z-index: 4;
-}
-
-.catalog-menu:focus-within .dropdown {
+.catalog-menu:hover .dropdown,
+.catalog-menu:focus-within .dropdown{
   display: block;
   position: absolute;
   z-index: 4;
