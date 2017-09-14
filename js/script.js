@@ -2,7 +2,8 @@ var feedbackButton = document.getElementById("feedbackButton");
 var feedbackForm = document.getElementById("feedbackForm");
 var overlayBlack = document.getElementById("overlayBlack");
 var crossForm = document.getElementById("crossForm");
-feedbackButton.addEventListener("click", function () {
+feedbackButton.addEventListener("click", function (event) {
+  event.preventDefault();
   if (feedbackForm.classList.contains("hidden")) {
     feedbackForm.classList.remove("hidden");
     overlayBlack.classList.remove("hidden");
